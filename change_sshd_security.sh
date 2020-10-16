@@ -2,10 +2,10 @@
 ##-------------------------------------------------------------------
 ## @copyright Abdalluh Mostafa
 ## 
-## https://raw.githubusercontent.com/DennyZhang/devops_public/tag_v1/LICENSE
+## https://github.com/abdalluhmostafa/change_sshd_security
 ##
-## File : sshd_security.sh
-## Author : Denny <abdalluh.mostafa@gmail.com>
+## File : change_sshd_security.sh
+## Author : Abdalluh Mostafa <abdalluh.mostafa@gmail.com>
 ## --
 ## Created : <2020-10-16>
 ##
@@ -50,7 +50,7 @@ function disable_root_login() {
 }
 
 
-LOG_FILE="/var/log/update_sshd_security.log"
+LOG_FILE="/var/log/change_sshd_security.log"
 
 ################################################################################
 # Make sure only root can run our script
@@ -62,4 +62,4 @@ reconfigure_sshd_port "$ssh_port"
 disable_passwd_login
 disable_root_login
 
-## File : update_sshd_security.sh ends
+## File : change_sshd_security.sh ends
