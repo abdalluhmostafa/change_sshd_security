@@ -29,7 +29,7 @@ function log() {
 function reconfigure_sshd_port() {
     local ssh_port=${1?}
     log "Change sshd port to $ssh_port"
-    sed -i "s/Port .*$/Port $ssh_port/g" /etc/ssh/sshd_config
+    sed -i "s/.*Port .*$/Port $ssh_port/g" /etc/ssh/sshd_config
     log "Restart sshd to take effect"
     nohup systemctl restart sshd &
 }
